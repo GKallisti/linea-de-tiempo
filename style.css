@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.timeline-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+}
+
+.timeline {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    border-radius: 4px;
+    position: relative;
+}
+
+.timeline::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.timeline::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.year-display {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card-container {
+    margin-top: 20px;
+    position: absolute;
+}
+
+.card {
+    width: 200px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card h3 {
+    font-size: 1.1em;
+    margin: 0 0 10px;
+}
+
+.card p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+/* Estilos del tema oscuro para cards */
+body.dark-theme .card {
+    background: #333;
+    border-color: #555;
+    color: #ddd;
+}
+
+/* Botón para alternar el tema */
+.theme-toggle {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 15px;
+}
+
+body.dark-theme .theme-toggle {
+    background-color: #333;
+    color: #ddd;
+}
